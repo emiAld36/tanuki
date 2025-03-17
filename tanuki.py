@@ -4,6 +4,7 @@ from kivy.uix.label import Label
 from kivy.uix.image import Image
 from kivy.uix.button import Button
 from kivy.uix.textinput import TextInput
+from kivy.uix.filechooser import FileChooserListView
 import os
 import yt_dlp
 
@@ -59,7 +60,22 @@ class Tanuki(App):
         self.audio_button.bind(on_press=self.callback_audio)
         self.window.add_widget(self.audio_button)
 
+        # Button widget for file location
+        self.file_chooser = FileChooserListView(filters=["*/"], size_hint_y=2)
+        self.window.add_widget(self.file_chooser)
+
+        self.select_button = Button(text="Select Folder")
+        self.select_button.bind(on_press=self.select_folder)
+        self.window.add_widget(self.select_button)
+
         return self.window
+
+    # updated to allow user specified path for downloads
+    def select_folder(self, instance):
+        selected_folder = self.file_chooser.path
+        self.label.text =  f"Selected: {selected_folder}"
+        print(f"Download path is set to: {selected_folder}")
+
 
     def get_download_path(self):
         """Returns the path to the ytRacoonDownloads folder inside ~/Music."""
