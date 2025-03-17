@@ -1,5 +1,5 @@
 
-**Tanuki Music Downloader**
+**Tanuki**
 =====================================
 
 A simple GUI application for downloading music videos and audio files from 
@@ -16,8 +16,7 @@ selection, and post-processing for audio extraction.
 **Features**
 
 *   Download music videos in high-quality
-*   Download audio-only tracks with customizable quality settings
-*   Customizable output directory (default: `~/Music/ytRacoonDownloads`)
+*   Download audio-only 
 *   Supports HTTPS and HTTP connections
 *   Handles SSL certificate errors
 
