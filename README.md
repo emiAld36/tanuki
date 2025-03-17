@@ -1,5 +1,5 @@
 
-**Tanuki Music Downloader**
+**Tanuki**
 =====================================
 
 A simple GUI application for downloading music videos and audio files from 
